@@ -14,7 +14,7 @@
     Menu Halaman
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="absen">Absen</a>
+    <a class="dropdown-item" href="absensi">Absensi</a>
     <a class="dropdown-item" href="dosen">Dosen</a>
     <a class="dropdown-item" href="kelas">Kelas</a>
     <a class="dropdown-item" href="matakuliah">Matakuliah</a>

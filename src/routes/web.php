@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+use \App\Http\Controllers\MatakuliahController;
+use \App\Http\Controllers\AbsensiController;
+use \App\Http\Controllers\DosenController;
+use \App\Http\Controllers\JadwalController;
+use \App\Http\Controllers\KelasController;
+use \App\Http\Controllers\MahasiswaController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,21 +26,26 @@ Route::get('/', function () {
     return view('mahasiswa');
 });
 
-Route::get('/absen',function(){
-    return view('absen');
+Route::get('/absensi',function(){
+    return view('absensi');
 });
 
-Route::get('/matakuliah',function(){
-    return view('matakuliah');
-});
+Route::get('/matakuliah',[MatakuliahController::class,'index'])
+->name('matakuliah.simpan');
+
+Route::get('/matakuliah/tampil/{id}',[MatakuliahController::class,'tampil'])
+->name('matakuliah.tampil');
+
 
 Route::get('/jadwal',function(){
     return view('jadwal');
 });
 
-Route::get('/dosen',function(){
-    return view('dosen');
-});
+Route::get('/dosen',[DosenController::class,'index'])
+->name('dosen.simpan');
+
+Route::get('/matakuliah/tampil/{nidn}',[DosenController::class,'tampil'])
+->name('dosen.tampil');
 
 Route::get('/kelas',function(){
     return view('kelas');

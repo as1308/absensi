@@ -14,7 +14,7 @@
     Menu Halaman
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="absen">Absensi</a>
+    <a class="dropdown-item" href="absensi">Absensi</a>
     <a class="dropdown-item" href="dosen">Dosen</a>
     <a class="dropdown-item" href="jadwal">Jadwal</a>
     <a class="dropdown-item" href="kelas">Kelas</a>
@@ -42,9 +42,13 @@
         </thead>
         <tbody>
                 <tr>
+                @foreach ($matakuliah as $item)
+                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->nama }}</td>
                     <td> <a href="" class="btn btn-warning btn-block">Rubah</a></td>
                     <td> <a href="" class="btn btn-danger btn-block">Hapus</a></td>
                 </tr>
+                @endforeach
         </tbody>
     </table>
     </div>
