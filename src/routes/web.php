@@ -23,7 +23,7 @@ use \App\Http\Controllers\MahasiswaController;
 */
 
 Route::get('/', function () {
-    return view('mahasiswa');
+    return view('jadwal');
 });
 
 Route::get('/absensi',function(){
